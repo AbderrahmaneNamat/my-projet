@@ -1,0 +1,29 @@
+.container3{
+  display: grid;
+
+}
+
+.box-part3{
+  display: flex;
+  gap: 10px;
+}
+.box-part3.box1{
+  width: 1200px;
+}
+.box-part3.box2{
+  width: 700px;
+  margin-left: 20px;
+}
+.box-part3 .item{
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+
+}
+.box-part3 .item img{
+  width: 300px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+
+}

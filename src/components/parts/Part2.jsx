@@ -21,8 +21,8 @@ useEffect(() => {
   return () => el.removeEventListener("wheel", onWheel);
 }, []);
   return (
-    <div className='flex justify-center'>
-        <div className='w-[70%]'>
+    <div className='flex justify-center part2'>
+        <div className='w-[80%]'>
             <div className='text-center md:text-5xl text-2xl p-3'>Des outils pour optimiser votre travail</div>
             <div className='flex items-center'>
              {
