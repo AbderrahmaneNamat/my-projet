@@ -1,19 +1,32 @@
-.container3{
-  display: grid;
+.wrapper3{
+  position: relative;
+  width: 100%;
 
 }
-
+.container3{
+  overflow-x: scroll;
+  background-color: aqua;
+  display: grid;
+  overflow-y: hidden;
+}
+/* ------------DIRECTION BUTTONS */
+.direction3{
+  position: absolute;
+  top: 50%;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  z-index: 10;
+}
+.leftDirection3{  left: 0px;}
+.rightDirection3{right: 0px;}
+/* ------------BOX PART3 */
 .box-part3{
   display: flex;
   gap: 10px;
 }
-.box-part3.box1{
-  width: 1200px;
-}
-.box-part3.box2{
-  width: 700px;
-  margin-left: 20px;
-}
+.box-part3.box1{width: 1200px;}
+.box-part3.box2{width: 700px;}
 .box-part3 .item{
   width: 300px;
   height: 300px;
@@ -26,4 +39,31 @@
   object-fit: cover;
   border-radius: 15px;
 
+}
+.img-multiple{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.img-multiple .slide-tracker{
+  display: flex;
+  width: calc(300px * 3); /* correct */
+  height: 300px;
+  animation: slide 9s ease-in-out infinite;
+}
+
+.img-multiple .slide-tracker img{
+  width: 300px;   /* match container */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  33%  { transform: translateX(-300px); }
+  66%  { transform: translateX(-600px); }
+  100% { transform: translateX(0); }
 }

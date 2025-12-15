@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [activeItem, setActiveItem] = useState("");
@@ -98,7 +99,7 @@ const Nav = () => {
         {/* Desktop menu */}
         <div className="md:flex justify-around w-[500px] hidden">
           {arr.map((el) => (
-            <div key={el}>{el}</div>
+            <div key={el}><Link to={`/${el.toLowerCase()}`}>{el}</Link></div>
           ))}
         </div>
 
